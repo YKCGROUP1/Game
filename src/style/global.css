@@ -1,0 +1,48 @@
+.header-content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 0px;
+    height: 40px;
+}
+.button1{
+    /* 退出登录按钮样式 */
+    color:white;
+    background-color: #330000;
+}
+.font1{
+    font-size:14px;
+    color:#330000;
+}
+.button2{
+    display: flex;
+    color:black !important;
+    /*background-color: #330000;*/
+    flex-basis: calc(25% - 10px); /* 设置每个按钮容器的宽度，包括间隔 */
+    margin-bottom: 10px; /* 设置按钮容器的下边距 */
+}
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* 允许按钮容器换行 */
+    justify-content: space-between; /* 在每个按钮容器之间添加间隔 */
+}
+.header1{
+    /* 头部样式 */
+    background: #EAE3EA;
+    height: 40px;
+
+}
+.aside1{
+    /* 侧边栏样式 */
+    width: 150px;
+    background: #333;
+    height: 100%;
+}
+.input-container {
+    margin-bottom: 10px;
+    margin-right: 10px; /* 设置两个容器之间的间距 */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
