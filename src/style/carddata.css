@@ -1,0 +1,179 @@
+.carddata_box{
+    height: 100px;
+    background-color: #ffffff;
+    padding: 10px;
+    /*flex-wrap: wrap;*/
+    margin-left: 20px;
+    border-radius: 10px; /* 设置圆角为10px */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* 添加2px的阴影效果 */
+}
+
+.el_row_style1{
+    text-align: center;
+    display: flex;
+    /*justify-content: space-between;*/
+}
+.ad_el_row_style1{
+    text-align: center;
+    display: flex;
+    margin-top: 15px;
+}
+.el_row_style2{
+    text-align: center;
+    display: flex;
+}
+.fontStyle1{
+    margin-top: 12%;
+    margin-bottom: 3%;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-size: 24px;
+}
+.fontStyle2{
+
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-size: 16px;
+}
+.fontStyle3{
+    text-align: left;
+    font-size: 12px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+}
+.fontStyle4{
+    margin-top: 15px;
+    margin-left: 5%;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-size: 10px;
+}
+.ad_fontStyle1{
+    margin-top: 12%;
+    margin-bottom: 3%;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-size: 20px;
+}
+.ad_fontStyle2{
+
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-size: 12px;
+}
+.ad_fontStyle3{
+    text-align: left;
+    font-size: 10px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+}
+
+.nbbutton1{
+    width: 8px;
+    height: 8px;
+    font-size: 8px;
+    text-align: center;
+}
+
+.backgroundbox {
+    height: 230px;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px; /* 设置圆角为10px */
+    margin-right: 20px;
+    margin-left: 20px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* 添加2px的阴影效果 */
+}
+.backgroundbox2 {
+    height: 400px;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px; /* 设置圆角为10px */
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* 添加2px的阴影效果 */
+}
+.list-container {
+    height: 230px; /* 设置容器的高度 */
+    overflow-y: scroll; /* 启用垂直滚动条 */
+}
+
+.list {
+    list-style-type: none;
+    margin: 1px;
+    padding: 0;
+
+}
+
+.list li {
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+.list li.selected {
+    border: 2px solid #ADD8E6; /* 添加选中时的边框样式 */
+}
+.list-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.list-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.list-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+div::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f1f1f1;
+}
+
+div::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+div::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+
+
+.businessDialog_carddata_box {
+    height: 100px;
+    background-color: #ffffff;
+    padding: 10px;
+    /*flex-wrap: wrap;*/
+    margin-left: 20px;
+    border-radius: 10px; /* 设置圆角为10px */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* 添加2px的阴影效果 */
+}
+.businessDialog_fontStyle1{
+    margin-top: 9%;
+    margin-bottom: 0%;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-size: 24px;
+}
+
+.custom-dialog {
+    background-color: rgba(239, 239, 239, 1);
+}
+
+
+.feeDialog_el-col1 {
+    margin-bottom: 15px;
+}
+
+.home_input_class1{
+    margin-left: 20px;
+    margin-top: 10px;
+}

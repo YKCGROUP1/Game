@@ -1,93 +1,59 @@
 <template>
   <el-container>
-    <el-aside  width="200px" >
-      <SideMenu></SideMenu>
+    <el-aside  width="160px" style="background-color: #ffffff" ref="asideRef">
+      <SideMenu  @menu-item-click="handleMenuItemClick"></SideMenu>
     </el-aside>
-    <el-container>
-      <el-header>
-        <strong>YKC后台(demo)</strong>
-        <div class="header-avatar">
-          <el-avatar class="avatar1" icon="el-icon-user-solid"></el-avatar>
+    <el-main>
+      <el-row style="margin-top: 3%">
+        <el-col :span="20">
+          <component :is="currentComponent"></component>
+        </el-col>
+        <el-col :span="4">
+          日志模块
+        </el-col>
+      </el-row>
 
-          <el-dropdown>
-              <span class="el-dropdown-link">
-                  {{ userInfo.name }}<i class="el-icon-arrow-down el-icon--right"></i>
-              </span>
-            <el-dropdown-menu slot="dropdown">
-              <router-link :to="{name: 'UserCenter'}" >
-                <el-dropdown-item >
-                  部门: {{userInfo.department}}
-                </el-dropdown-item>
-              </router-link>
-              <el-dropdown-item @click.native="logout">退出登录</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
-        </div>
-      </el-header>
-
-
-      <el-main>
-        <TabsMenu></TabsMenu>
-       <router-view></router-view>
-      </el-main>
-    </el-container>
+    </el-main>
   </el-container>
 
 </template>
 
 
 <script>
-import SideMenu from "@/views/inc/SideMenu.vue";
-import TabsMenu from "@/views/inc/TabsMenu.vue";
+import SideMenu from "@/views/SideMenu.vue";
+import FishPart from "@/views/Fish/FishPart.vue"
+import BagPart from "@/views/Bag/BagPart.vue";
+import BattlePart from "@/views/Battle/BattlePart.vue";
 export default {
   name: 'HomeView',
+  computed: {
+
+  },
   components : {
     SideMenu,
-    TabsMenu
+    FishPart,
+    BagPart,
+    BattlePart,
 
   },
   data() {
     return {
-       userInfo: {
-         id: '',
-         department: '',
-         name: '',
-         writeaut: '',
-       },
-       userCenterItem:{
-         title: '用户中心',
-         name:'UserCenter',
-         path: '/userCenter',
-         component: 'UserCenter',
-         children:[]
-       }
+      currentComponent: '', // 当前要渲染的组件名
     }
   },
-  created() {
-    this.getUserInfo()
-  },
   methods: {
-    getUserInfo() {
-      this.$axios.get('/api/userInfo',{
-        headers: {
-          Authorization: localStorage.getItem("token")
-        }
-      }).then(res=>{
-        this.userInfo = res.data.data
-        this.$store.commit("SET_USERINFO",res.data.data)
-      })
+    //点击渲染组件函数
+    handleMenuItemClick(name) {
+      if (name === '钓鱼') {
+        this.currentComponent = 'FishPart';
+      } else if (name === '背包') {
+        this.currentComponent = 'BagPart';
+      }else if (name ==='区域'){
+        this.currentComponent = 'BattlePart'
+      }
     },
-    logout() {
-        localStorage.clear()
-        sessionStorage.clear()
 
-        this.$store.commit("resetState")
-        this.$router.replace('/')
 
-    },
-    selectMenu(item) {
-      this.$store.commit("addTabsMenu",item)
-    },
   },
 }
 </script>
@@ -115,6 +81,7 @@ export default {
 
 .avatar1 {
   margin-right: 5px;
+
 }
 .el-main {
   background-color: white;
@@ -126,7 +93,6 @@ export default {
 }
 
 body > .el-container {
-  margin-bottom: 40px;
 }
 
 .el-container:nth-child(5) .el-aside,
@@ -142,5 +108,21 @@ a{
 }
 .router-link-active {
   text-decoration: none;
+}
+.header-container{
+  background-color: #ffffff;
+  height: 55px;
+  color: #000000;
+}
+.resize1{
+  float: left;
+}
+.custom-icon::before {
+  content: "\e7bb"; /* 修改为您想要的图标代码 */
+  font-size: 24px; /* 修改为您想要的图标大小 */
+  margin-right: 10px;
+}
+.el-aside {
+  transition: width 0.3s ease;
 }
 </style>

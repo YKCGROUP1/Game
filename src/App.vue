@@ -4,7 +4,7 @@
 
 </template>
 <script>
-import HelloWorld from './views/TestView.vue'
+
 
 export default {
   name: 'App',
@@ -25,6 +25,11 @@ html, body, #app {
   padding: 0;
   margin: 0;
   font-size: 15px;
+}
+
+
+.el-card__body, .el-main {
+  padding: 0px;
 }
 </style>
 

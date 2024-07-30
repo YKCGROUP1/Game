@@ -1,0 +1,9 @@
+.left-section1 {
+    margin-left: 20px;
+}
+
+.echartHeader1{
+    height: 115px;
+    display: flex;
+    align-items: center;
+}

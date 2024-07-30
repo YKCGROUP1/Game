@@ -1,0 +1,9 @@
+.backgroundbox {
+    height: 320px;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}

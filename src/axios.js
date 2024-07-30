@@ -5,6 +5,7 @@ import ElementUI from "element-ui"
 axios.defaults.baseURL = "http://localhost:9090"
 
 const request = axios.create({
+    baseURL: process.env.BASE_API, // api的base_url
     timeout: 5000,
     headers: {
         'Content-Type': "application/json; charset=utf-8"
